@@ -24,6 +24,7 @@ import {
 import { useTheme } from '@mui/material/styles';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ListAltIcon from '@mui/icons-material/ListAlt';
+import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import MenuIcon from '@mui/icons-material/Menu';
 import Log from '../api/logger';
 import { LOG_LEVELS, LOG_PACKAGES } from '../api/constants';
@@ -61,9 +62,8 @@ export default function TopNav() {
           {/* ── Brand ── */}
           <Stack
             direction="row"
-            alignItems="center"
             spacing={1.2}
-            sx={{ flexGrow: 1, cursor: 'pointer', transition: 'transform 0.2s ease', '&:hover': { transform: 'scale(1.02)' }, '&:active': { transform: 'scale(0.98)' } }}
+            sx={{ alignItems: 'center', flexGrow: 1, cursor: 'pointer', transition: 'transform 0.2s ease', '&:hover': { transform: 'scale(1.02)' }, '&:active': { transform: 'scale(0.98)' } }}
             onClick={() => goTo('/')}
           >
             <NotificationsActiveIcon sx={{ color: 'primary.main', fontSize: 28 }} />

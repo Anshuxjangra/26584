@@ -12,7 +12,7 @@ export default function FeedSkeleton({ count = 5 }) {
       {Array.from({ length: count }).map((_, idx) => (
         <Card key={idx} sx={{ opacity: 0.55 }}>
           <CardContent>
-            <Stack direction="row" justifyContent="space-between" alignItems="flex-start">
+            <Stack direction="row" spacing={1} sx={{ justifyContent: 'space-between', alignItems: 'flex-start' }}>
               <Box sx={{ flex: 1 }}>
                 <Skeleton
                   variant="rounded"

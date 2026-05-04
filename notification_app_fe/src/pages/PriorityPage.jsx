@@ -18,7 +18,7 @@ import {
   Chip,
 } from '@mui/material';
 import BoltIcon from '@mui/icons-material/Bolt';
-import { fetchNotifications } from '../api/gateway';
+import { fetchNotifications } from '../api/fetchApi';
 import { rankByPriority } from '../helpers/sortLogic';
 import AlertCard from '../components/AlertCard';
 import FeedSkeleton from '../components/FeedSkeleton';
@@ -90,7 +90,7 @@ export default function PriorityPage() {
     <Container maxWidth="md" sx={{ py: 4 }}>
       {/* ── Header ── */}
       <Stack spacing={0.5} mb={3}>
-        <Stack direction="row" spacing={1.5} alignItems="center">
+        <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
           <BoltIcon sx={{ color: 'secondary.main', fontSize: 32 }} />
           <Typography 
             variant="h4" 
@@ -122,7 +122,7 @@ export default function PriorityPage() {
           border: '1px solid rgba(108,99,255,0.1)',
         }}
       >
-        <Stack direction="row" alignItems="center" spacing={2} mb={1}>
+        <Stack direction="row" spacing={2} mb={1} sx={{ alignItems: 'center' }}>
           <Typography variant="subtitle2" color="text.secondary">
             Show top
           </Typography>
@@ -160,7 +160,7 @@ export default function PriorityPage() {
       </Box>
 
       {/* ── Priority Legend ── */}
-      <Stack direction="row" spacing={1.5} flexWrap="wrap" useFlexGap mb={3}>
+      <Stack direction="row" spacing={1.5} useFlexGap mb={3} sx={{ flexWrap: 'wrap' }}>
         <Chip label="🟢 Placement (Highest)" size="small" variant="outlined" />
         <Chip label="🟡 Result (Medium)" size="small" variant="outlined" />
         <Chip label="🟣 Event (Standard)" size="small" variant="outlined" />

@@ -11,7 +11,7 @@
  */
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { fetchNotifications } from '../api/gateway';
+import { fetchNotifications } from '../api/fetchApi';
 import Log from '../api/logger';
 import { LOG_LEVELS, LOG_PACKAGES, PAGINATION } from '../api/constants';
 

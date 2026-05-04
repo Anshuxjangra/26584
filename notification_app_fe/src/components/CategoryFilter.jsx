@@ -33,9 +33,8 @@ export default function CategoryFilter({ active = '', onSelect }) {
       id="category-filter-bar"
       direction="row"
       spacing={1}
-      flexWrap="wrap"
       useFlexGap
-      alignItems="center"
+      sx={{ flexWrap: 'wrap', alignItems: 'center' }}
     >
       <FilterListIcon sx={{ color: 'text.secondary', mr: 0.5 }} />
       {FILTER_OPTIONS.map((opt) => (

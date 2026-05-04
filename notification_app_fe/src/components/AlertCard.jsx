@@ -97,9 +97,11 @@ export default function AlertCard({ item = {} }) {
       <CardContent sx={{ py: 2.5, px: 3 }}>
         <Stack
           direction={{ xs: 'column', sm: 'row' }}
-          justifyContent="space-between"
-          alignItems={{ xs: 'flex-start', sm: 'flex-start' }}
           spacing={1.5}
+          sx={{
+            justifyContent: 'space-between',
+            alignItems: { xs: 'flex-start', sm: 'flex-start' }
+          }}
         >
           {/* Left — content */}
           <Box sx={{ flex: 1, minWidth: 0 }}>

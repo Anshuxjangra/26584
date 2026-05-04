@@ -11,10 +11,8 @@ export default function NoData({ message = 'No notifications found' }) {
   return (
     <Stack
       id="empty-slate"
-      alignItems="center"
-      justifyContent="center"
       spacing={2}
-      sx={{ py: 10, opacity: 0.65 }}
+      sx={{ alignItems: 'center', justifyContent: 'center', py: 10, opacity: 0.65 }}
     >
       <InboxOutlinedIcon sx={{ fontSize: 68, color: 'text.secondary' }} />
       <Typography variant="h6" color="text.secondary">
