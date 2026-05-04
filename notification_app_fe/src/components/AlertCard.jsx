@@ -105,7 +105,7 @@ export default function AlertCard({ item = {} }) {
         >
           {/* Left — content */}
           <Box sx={{ flex: 1, minWidth: 0 }}>
-            <Stack direction="row" spacing={1} alignItems="center" mb={0.8}>
+            <Stack direction="row" spacing={1} sx={{ alignItems: 'center', mb: 0.8 }}>
               <Chip
                 icon={vis.icon}
                 label={category}
@@ -155,8 +155,7 @@ export default function AlertCard({ item = {} }) {
             <Stack
               direction="row"
               spacing={0.5}
-              alignItems="center"
-              sx={{ flexShrink: 0, pt: { xs: 0, sm: 0.5 } }}
+              sx={{ alignItems: 'center', flexShrink: 0, pt: { xs: 0, sm: 0.5 } }}
             >
               <AccessTimeIcon sx={{ fontSize: 14, color: 'text.secondary' }} />
               <Typography variant="caption" color="text.secondary" noWrap>
