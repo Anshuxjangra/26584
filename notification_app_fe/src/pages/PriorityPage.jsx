@@ -190,8 +190,12 @@ export default function PriorityPage() {
                     top: -8,
                     right: 16,
                     zIndex: 2,
-                    bgcolor: idx < 3 ? 'secondary.main' : 'primary.main',
-                    color: idx < 3 ? '#0A0A0A' : '#fff',
+                    bgcolor: item.Type === 'Placement' || item.notification_type === 'Placement' || item.type === 'Placement'
+                      ? 'secondary.main' // Green
+                      : (item.Type === 'Result' || item.notification_type === 'Result' || item.type === 'Result'
+                        ? '#FFD700' // Gold/Yellow for Results
+                        : 'primary.main'), // Purple for Events
+                    color: (item.Type === 'Event' || item.notification_type === 'Event' || item.type === 'Event') ? '#fff' : '#0A0A0A',
                     borderRadius: '50%',
                     width: 30,
                     height: 30,
@@ -200,7 +204,7 @@ export default function PriorityPage() {
                     justifyContent: 'center',
                     fontWeight: 800,
                     fontSize: '0.75rem',
-                    boxShadow: `0 2px 8px ${idx < 3 ? 'rgba(0,229,160,0.4)' : 'rgba(108,99,255,0.4)'}`,
+                    boxShadow: 3,
                   }}
                 >
                   #{idx + 1}

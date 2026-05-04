@@ -55,7 +55,7 @@ async function Log(stack, level, pkg, message) {
     stack,
     level,
     package: pkg,
-    message,
+    message: message.length > 48 ? message.substring(0, 45) + '...' : message,
     timestamp: new Date().toISOString(),
   };
 

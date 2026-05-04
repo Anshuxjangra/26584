@@ -27,8 +27,8 @@ const CATEGORY_VISUALS = {
   },
   Result: {
     icon: <SchoolIcon fontSize="small" />,
-    accent: '#FFB547',
-    bgTint: 'rgba(255, 181, 71, 0.12)',
+    accent: '#FFD700', // Brighter Gold/Yellow
+    bgTint: 'rgba(255, 215, 0, 0.12)',
   },
   Placement: {
     icon: <WorkOutlinedIcon fontSize="small" />,
@@ -54,7 +54,14 @@ function humanTime(raw) {
 export default function AlertCard({ item = {} }) {
   const category = item.Type || item.notification_type || item.type || 'Event';
   const vis = CATEGORY_VISUALS[category] || CATEGORY_VISUALS.Event;
-  const unread = item.read === false || item.is_read === false;
+  
+  // Robust unread detection (check multiple naming variants)
+  const unread = 
+    item.read === false || 
+    item.is_read === false || 
+    item.isRead === false ||
+    item.Read === false;
+
   const heading = item.title || item.heading || item.Message || 'Untitled Notification';
   const body = item.Message || item.message || item.description || item.body || '';
   const timeRaw = item.Timestamp || item.createdAt || item.created_at || item.timestamp || item.date;
